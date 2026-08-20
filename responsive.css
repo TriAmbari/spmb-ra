@@ -1,0 +1,1697 @@
+```css
+/* =========================================================
+   SPMB RA DARURRAHMAN
+   RESPONSIVE CSS
+   Mobile • Tablet • Desktop
+   ========================================================= */
+
+
+/* =========================================================
+   01. LARGE DESKTOP
+   1200px+
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .container {
+        width: min(
+            calc(100% - 64px),
+            1160px
+        );
+    }
+
+    .hero {
+        min-height: 760px;
+    }
+
+    .hero__content {
+        padding-top: 20px;
+    }
+
+    .introduction__grid {
+        gap: 75px;
+    }
+
+    .registration-card {
+        padding: 35px;
+    }
+
+    .map-wrapper iframe {
+        min-height: 480px;
+    }
+
+    .floating-register {
+        right: 30px;
+        bottom: 30px;
+    }
+
+    .back-to-top {
+        right: 30px;
+        bottom: 90px;
+    }
+}
+
+
+/* =========================================================
+   02. DESKTOP / LAPTOP
+   992px - 1199px
+   ========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .container {
+        width: min(
+            calc(100% - 48px),
+            1080px
+        );
+    }
+
+    .section {
+        padding: 85px 0;
+    }
+
+    .hero {
+        min-height: 700px;
+    }
+
+    .hero__title {
+        font-size: 78px;
+    }
+
+    .hero__title span {
+        font-size: 36px;
+    }
+
+    .introduction__grid {
+        gap: 45px;
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+
+    .registration-card {
+        max-width: 850px;
+    }
+
+    .info-grid {
+        max-width: 850px;
+    }
+
+    .reminder {
+        max-width: 850px;
+    }
+
+    .map-wrapper iframe {
+        min-height: 430px;
+    }
+
+    .social-grid {
+        max-width: 900px;
+    }
+}
+
+
+/* =========================================================
+   03. TABLET LANDSCAPE
+   768px - 991px
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        width: min(
+            calc(100% - 40px),
+            850px
+        );
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 680px;
+
+        padding:
+            70px 20px
+            110px;
+    }
+
+    .hero__logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero__title {
+        font-size: 70px;
+    }
+
+    .hero__title span {
+        font-size: 32px;
+    }
+
+    .hero__description {
+        max-width: 620px;
+    }
+
+
+    /* INTRO */
+
+    .introduction__grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 35px;
+    }
+
+    .title-story {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .image-card__badge {
+        right: 20px;
+        bottom: 20px;
+    }
+
+
+    /* REGISTRATION */
+
+    .registration-card {
+        padding: 25px;
+    }
+
+    .registration-card__top {
+        gap: 18px;
+    }
+
+    .registration-logo {
+        width: 85px;
+        height: 85px;
+
+        flex-basis: 85px;
+    }
+
+    .registration-card h3 {
+        font-size: 26px;
+    }
+
+
+    /* INFORMATION */
+
+    .info-grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 15px;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown {
+        max-width: 650px;
+    }
+
+    .countdown__item {
+        padding: 22px 10px;
+    }
+
+
+    /* MAP */
+
+    .map-wrapper iframe {
+        min-height: 390px;
+    }
+
+
+    /* SOCIAL */
+
+    .social-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 12px;
+    }
+
+    .social-card {
+        padding: 14px;
+    }
+
+    .social-card__icon {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+
+    /* FLOATING BUTTON */
+
+    .floating-register {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .back-to-top {
+        right: 20px;
+        bottom: 82px;
+    }
+}
+
+
+/* =========================================================
+   04. TABLET PORTRAIT / LARGE PHONE
+   576px - 767px
+   ========================================================= */
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 680px;
+
+        padding:
+            65px 20px
+            120px;
+    }
+
+    .hero__logo {
+        width: 95px;
+        height: 95px;
+    }
+
+    .hero__title {
+        font-size: 62px;
+        letter-spacing: -2px;
+    }
+
+    .hero__title span {
+        font-size: 29px;
+    }
+
+    .hero__subtitle {
+        font-size: 18px;
+    }
+
+    .hero__description {
+        max-width: 500px;
+        font-size: 15px;
+    }
+
+    .hero__actions {
+        flex-direction: row;
+    }
+
+    .hero__actions .btn {
+        flex: 1;
+    }
+
+    .hero__trust {
+        gap: 14px;
+    }
+
+
+    /* GREETING */
+
+    .arabic-greeting {
+        font-size: 24px;
+    }
+
+
+    /* INTRODUCTION */
+
+    .introduction__grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .introduction__image {
+        max-width: 580px;
+
+        margin-inline: auto;
+    }
+
+
+    /* REGISTRATION */
+
+    .registration-card {
+        padding: 24px;
+    }
+
+    .registration-card__top {
+        gap: 18px;
+    }
+
+    .registration-logo {
+        width: 78px;
+        height: 78px;
+
+        flex-basis: 78px;
+    }
+
+    .registration-card h3 {
+        font-size: 25px;
+    }
+
+
+    /* INFORMATION */
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* REMINDER */
+
+    .reminder {
+        flex-wrap: wrap;
+    }
+
+    .reminder__content {
+        min-width: calc(100% - 65px);
+    }
+
+    .reminder .btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown {
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 10px;
+    }
+
+    .countdown__item {
+        padding: 20px 8px;
+    }
+
+
+    /* MAP */
+
+    .location-card__header {
+        padding: 22px;
+    }
+
+    .map-wrapper iframe {
+        min-height: 350px;
+    }
+
+
+    /* SOCIAL */
+
+    .social-grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+    }
+
+
+    /* MOBILE NAV */
+
+    .mobile-nav {
+        display: grid;
+    }
+
+    .floating-register {
+        bottom: 82px;
+    }
+
+    .back-to-top {
+        bottom: 140px;
+    }
+}
+
+
+/* =========================================================
+   05. STANDARD MOBILE
+   400px - 575px
+   ========================================================= */
+
+@media (min-width: 400px) and (max-width: 575px) {
+
+    body {
+        font-size: 14px;
+
+        padding-bottom: 75px;
+    }
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 650px;
+
+        padding:
+            50px 16px
+            105px;
+    }
+
+    .hero__logo {
+        width: 88px;
+        height: 88px;
+
+        margin-bottom: 18px;
+    }
+
+    .hero__badge {
+        padding: 6px 12px;
+
+        font-size: 11px;
+    }
+
+    .hero__title {
+        margin-top: 15px;
+
+        font-size: 50px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero__title span {
+        margin-top: 9px;
+
+        font-size: 24px;
+    }
+
+    .hero__subtitle {
+        margin-top: 15px;
+
+        font-size: 16px;
+    }
+
+    .hero__description {
+        margin-bottom: 24px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+
+        width: 100%;
+
+        max-width: 360px;
+
+        margin-inline: auto;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    .hero__trust {
+        gap: 8px 14px;
+
+        margin-top: 25px;
+    }
+
+    .trust-item {
+        font-size: 10px;
+    }
+
+    .hero__wave {
+        height: 60px;
+    }
+
+
+    /* GREETING */
+
+    .greeting {
+        padding-top: 25px;
+    }
+
+    .arabic-greeting {
+        font-size: 20px;
+    }
+
+    .greeting-text {
+        font-size: 11px;
+    }
+
+    .section-decoration {
+        gap: 10px;
+    }
+
+    .decoration-line {
+        width: 40px;
+    }
+
+
+    /* SECTION HEADINGS */
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading__eyebrow {
+        font-size: 12px;
+    }
+
+    .section-heading h2 {
+        margin-bottom: 10px;
+
+        font-size: 29px;
+
+        letter-spacing: -0.6px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+
+    /* INTRODUCTION */
+
+    .introduction {
+        padding-top: 55px;
+    }
+
+    .introduction__grid {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+    .image-card {
+        padding: 8px;
+
+        border-radius: 27px;
+    }
+
+    .image-card img {
+        border-radius: 21px;
+    }
+
+    .image-card::before {
+        top: -13px;
+        right: 18px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 16px;
+    }
+
+    .image-card__badge {
+        right: 15px;
+        bottom: 15px;
+
+        padding: 7px 10px;
+
+        font-size: 9px;
+    }
+
+    .title-story {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .introduction__highlight {
+        gap: 10px;
+
+        margin-top: 20px;
+        padding: 14px;
+    }
+
+    .highlight-icon {
+        flex-basis: 40px;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 12px;
+    }
+
+    .introduction__highlight strong {
+        font-size: 12px;
+    }
+
+    .introduction__highlight span {
+        font-size: 10px;
+    }
+
+
+    /* REGISTRATION */
+
+    .registration {
+        padding-top: 60px;
+    }
+
+    .registration-card {
+        padding: 18px;
+
+        border-radius: 24px;
+    }
+
+    .registration-card__top {
+        align-items: flex-start;
+
+        gap: 13px;
+
+        padding-bottom: 20px;
+    }
+
+    .registration-logo {
+        width: 64px;
+        height: 64px;
+
+        flex-basis: 64px;
+
+        padding: 7px;
+
+        border-radius: 18px;
+    }
+
+    .registration-label {
+        margin-bottom: 2px;
+
+        font-size: 10px;
+    }
+
+    .registration-card h3 {
+        margin-bottom: 2px;
+
+        font-size: 21px;
+    }
+
+    .registration-card p {
+        font-size: 11px;
+    }
+
+    .registration-card__action {
+        padding-top: 18px;
+    }
+
+    .btn--xl {
+        min-height: 65px;
+
+        padding: 9px 13px;
+
+        gap: 8px;
+
+        border-radius: 15px;
+    }
+
+    .btn--xl strong {
+        font-size: 12px;
+    }
+
+    .btn--xl small {
+        font-size: 9px;
+    }
+
+    .btn--xl > i {
+        font-size: 13px;
+    }
+
+
+    /* INFO */
+
+    .info-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 15px;
+    }
+
+    .info-card {
+        gap: 12px;
+
+        padding: 17px;
+
+        border-radius: 18px;
+    }
+
+    .info-card__icon {
+        flex-basis: 43px;
+
+        width: 43px;
+        height: 43px;
+
+        border-radius: 13px;
+
+        font-size: 16px;
+    }
+
+    .info-card__content span {
+        font-size: 10px;
+    }
+
+    .info-card h3 {
+        font-size: 15px;
+    }
+
+    .info-card p {
+        font-size: 10px;
+    }
+
+
+    /* REMINDER */
+
+    .reminder {
+        display: grid;
+
+        grid-template-columns:
+            42px 1fr;
+
+        gap: 10px;
+
+        padding: 14px;
+
+        border-radius: 17px;
+    }
+
+    .reminder__icon {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+
+        border-radius: 12px;
+    }
+
+    .reminder__content strong {
+        font-size: 12px;
+    }
+
+    .reminder__content span {
+        font-size: 9px;
+    }
+
+    .reminder .btn {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        min-height: 43px;
+
+        margin-top: 2px;
+
+        padding: 9px 14px;
+
+        font-size: 11px;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown-section {
+        padding: 65px 0;
+    }
+
+    .countdown {
+        gap: 7px;
+    }
+
+    .countdown__item {
+        padding: 16px 5px;
+
+        border-radius: 16px;
+    }
+
+    .countdown__item strong {
+        font-size: 29px;
+    }
+
+    .countdown__item span {
+        margin-top: 5px;
+
+        font-size: 9px;
+    }
+
+
+    /* QUOTE */
+
+    .quote-section {
+        padding: 60px 0;
+    }
+
+    .quote-card {
+        padding: 32px 18px;
+
+        border-radius: 24px;
+    }
+
+    .quote-card__icon {
+        width: 42px;
+        height: 42px;
+
+        margin-bottom: 15px;
+    }
+
+    .quote-card p {
+        font-size: 16px;
+    }
+
+    .quote-card__decoration {
+        margin-top: 14px;
+
+        font-size: 12px;
+    }
+
+
+    /* LOCATION */
+
+    .location {
+        padding-bottom: 60px;
+    }
+
+    .location-card {
+        border-radius: 22px;
+    }
+
+    .location-card__header {
+        gap: 11px;
+
+        padding: 18px;
+    }
+
+    .location-card__icon {
+        flex-basis: 43px;
+
+        width: 43px;
+        height: 43px;
+
+        border-radius: 13px;
+
+        font-size: 16px;
+    }
+
+    .location-card__header h3 {
+        margin-bottom: 3px;
+
+        font-size: 16px;
+    }
+
+    .location-card__header p {
+        font-size: 10px;
+    }
+
+    .map-wrapper {
+        min-height: 280px;
+    }
+
+    .map-wrapper iframe {
+        min-height: 280px;
+    }
+
+    .location-card__action {
+        padding: 18px;
+    }
+
+    .location-card__action .btn {
+        width: 100%;
+
+        min-height: 48px;
+
+        font-size: 12px;
+    }
+
+
+    /* SOCIAL */
+
+    .social-section {
+        padding: 65px 0;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .social-card {
+        padding: 12px;
+
+        border-radius: 17px;
+    }
+
+    .social-card__icon {
+        flex-basis: 42px;
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+    }
+
+    .social-card__text strong {
+        font-size: 12px;
+    }
+
+    .social-card__text small {
+        font-size: 9px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding:
+            55px 0
+            115px;
+    }
+
+    .footer__logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer__greeting {
+        font-size: 12px;
+    }
+
+    .footer__website {
+        font-size: 12px;
+    }
+
+    .footer__copyright {
+        font-size: 9px;
+    }
+
+
+    /* FLOATING REGISTER */
+
+    .floating-register {
+        right: 14px;
+        bottom: 82px;
+
+        padding: 6px 12px 6px 6px;
+
+        font-size: 10px;
+    }
+
+    .floating-register__icon {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    /* BACK TOP */
+
+    .back-to-top {
+        right: 14px;
+        bottom: 137px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* MOBILE NAV */
+
+    .mobile-nav {
+        display: grid;
+
+        bottom: 8px;
+
+        width: calc(100% - 16px);
+
+        padding: 5px;
+
+        border-radius: 19px;
+    }
+
+    .mobile-nav__item {
+        min-height: 50px;
+
+        border-radius: 14px;
+
+        font-size: 8px;
+    }
+
+    .mobile-nav__item i {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   06. SMALL MOBILE
+   320px - 399px
+   ========================================================= */
+
+@media (max-width: 399px) {
+
+    body {
+        font-size: 13px;
+
+        padding-bottom: 72px;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 620px;
+
+        padding:
+            42px 12px
+            95px;
+    }
+
+    .hero__logo {
+        width: 76px;
+        height: 76px;
+
+        padding: 8px;
+    }
+
+    .hero__badge {
+        font-size: 9px;
+
+        padding: 5px 10px;
+    }
+
+    .hero__title {
+        margin-top: 13px;
+
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero__title span {
+        font-size: 20px;
+    }
+
+    .hero__subtitle {
+        font-size: 14px;
+    }
+
+    .hero__description {
+        font-size: 11px;
+    }
+
+    .hero__actions {
+        max-width: 100%;
+    }
+
+    .btn {
+        min-height: 48px;
+
+        padding: 10px 16px;
+
+        font-size: 12px;
+    }
+
+    .btn--large {
+        min-height: 51px;
+    }
+
+    .hero__trust {
+        gap: 7px 10px;
+    }
+
+    .trust-item {
+        font-size: 8px;
+    }
+
+    .trust-item i {
+        font-size: 9px;
+    }
+
+
+    /* GREETING */
+
+    .arabic-greeting {
+        font-size: 18px;
+    }
+
+    .greeting-text {
+        font-size: 9px;
+    }
+
+
+    /* HEADING */
+
+    .section-heading__eyebrow {
+        font-size: 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .section-heading p {
+        font-size: 11px;
+    }
+
+
+    /* INTRO */
+
+    .introduction__grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .title-story {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+    .image-card__badge {
+        font-size: 8px;
+
+        padding: 6px 8px;
+    }
+
+    .introduction__highlight {
+        padding: 12px;
+    }
+
+    .highlight-icon {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .introduction__highlight strong {
+        font-size: 10px;
+    }
+
+    .introduction__highlight span {
+        font-size: 8px;
+    }
+
+
+    /* REGISTRATION */
+
+    .registration-card {
+        padding: 14px;
+
+        border-radius: 20px;
+    }
+
+    .registration-card__top {
+        gap: 9px;
+    }
+
+    .registration-logo {
+        width: 54px;
+        height: 54px;
+
+        flex-basis: 54px;
+
+        border-radius: 15px;
+    }
+
+    .registration-label {
+        font-size: 8px;
+    }
+
+    .registration-card h3 {
+        font-size: 18px;
+    }
+
+    .registration-card p {
+        font-size: 9px;
+    }
+
+    .btn--xl {
+        min-height: 58px;
+
+        padding: 8px 10px;
+
+        border-radius: 13px;
+    }
+
+    .btn--xl strong {
+        font-size: 10px;
+    }
+
+    .btn--xl small {
+        font-size: 8px;
+    }
+
+    .btn--xl > i {
+        font-size: 10px;
+    }
+
+
+    /* INFO */
+
+    .info-card {
+        padding: 14px;
+
+        border-radius: 16px;
+    }
+
+    .info-card__icon {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+
+        border-radius: 11px;
+
+        font-size: 14px;
+    }
+
+    .info-card__content span {
+        font-size: 8px;
+    }
+
+    .info-card h3 {
+        font-size: 13px;
+    }
+
+    .info-card p {
+        font-size: 8px;
+    }
+
+
+    /* REMINDER */
+
+    .reminder {
+        padding: 11px;
+
+        gap: 8px;
+    }
+
+    .reminder__icon {
+        width: 37px;
+        height: 37px;
+
+        flex-basis: 37px;
+    }
+
+    .reminder__content strong {
+        font-size: 10px;
+    }
+
+    .reminder__content span {
+        font-size: 8px;
+    }
+
+    .reminder .btn {
+        min-height: 39px;
+
+        font-size: 9px;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown {
+        gap: 5px;
+    }
+
+    .countdown__item {
+        padding: 14px 3px;
+
+        border-radius: 13px;
+    }
+
+    .countdown__item strong {
+        font-size: 24px;
+    }
+
+    .countdown__item span {
+        font-size: 8px;
+    }
+
+
+    /* QUOTE */
+
+    .quote-card {
+        padding: 27px 14px;
+    }
+
+    .quote-card p {
+        font-size: 14px;
+    }
+
+
+    /* LOCATION */
+
+    .location-card__header {
+        padding: 14px;
+    }
+
+    .location-card__icon {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+
+        border-radius: 11px;
+    }
+
+    .location-card__header h3 {
+        font-size: 14px;
+    }
+
+    .location-card__header p {
+        font-size: 8px;
+    }
+
+    .map-wrapper iframe {
+        min-height: 250px;
+    }
+
+    .location-card__action {
+        padding: 14px;
+    }
+
+
+    /* SOCIAL */
+
+    .social-card {
+        padding: 10px;
+    }
+
+    .social-card__icon {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+
+        border-radius: 11px;
+    }
+
+    .social-card__text strong {
+        font-size: 10px;
+    }
+
+    .social-card__text small {
+        font-size: 8px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding:
+            50px 0
+            105px;
+    }
+
+    .footer__logo {
+        width: 62px;
+        height: 62px;
+    }
+
+    .footer__greeting {
+        font-size: 10px;
+    }
+
+    .footer__website {
+        font-size: 10px;
+    }
+
+
+    /* FLOATING REGISTER */
+
+    .floating-register {
+        right: 10px;
+        bottom: 78px;
+
+        padding: 5px 10px 5px 5px;
+
+        font-size: 8px;
+    }
+
+    .floating-register__icon {
+        width: 31px;
+        height: 31px;
+    }
+
+
+    /* BACK TOP */
+
+    .back-to-top {
+        right: 10px;
+        bottom: 128px;
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 11px;
+    }
+
+
+    /* MOBILE NAV */
+
+    .mobile-nav {
+        bottom: 6px;
+
+        width: calc(100% - 12px);
+
+        padding: 4px;
+
+        border-radius: 17px;
+    }
+
+    .mobile-nav__item {
+        min-height: 48px;
+
+        border-radius: 12px;
+
+        font-size: 7px;
+    }
+
+    .mobile-nav__item i {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   07. VERY SMALL DEVICES
+   320px
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+    .hero__title {
+        font-size: 39px;
+    }
+
+    .hero__title span {
+        font-size: 18px;
+    }
+
+    .hero__subtitle {
+        font-size: 13px;
+    }
+
+    .hero__description {
+        font-size: 10px;
+    }
+
+    .hero__trust {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 5px;
+    }
+
+    .trust-item {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .countdown__item strong {
+        font-size: 21px;
+    }
+
+    .countdown__item span {
+        font-size: 7px;
+    }
+
+    .floating-register__text {
+        display: none;
+    }
+
+    .floating-register {
+        width: 42px;
+        height: 42px;
+
+        display: grid;
+        place-items: center;
+
+        padding: 0;
+    }
+
+    .floating-register__icon {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+/* =========================================================
+   08. LANDSCAPE MOBILE
+   ========================================================= */
+
+@media (
+    max-height: 500px
+) and (
+    orientation: landscape
+) {
+
+    .hero {
+        min-height: 580px;
+
+        padding-top: 35px;
+    }
+
+    .hero__logo {
+        width: 65px;
+        height: 65px;
+
+        margin-bottom: 10px;
+    }
+
+    .hero__title {
+        margin-top: 10px;
+
+        font-size: 42px;
+    }
+
+    .hero__title span {
+        font-size: 19px;
+    }
+
+    .hero__description {
+        margin-bottom: 15px;
+    }
+
+    .hero__trust {
+        margin-top: 18px;
+    }
+
+    .hero__wave {
+        height: 45px;
+    }
+
+    .mobile-nav {
+        display: grid;
+
+        bottom: 4px;
+    }
+}
+
+
+/* =========================================================
+   09. TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .btn,
+    .mobile-nav__item,
+    .social-card,
+    .info-card,
+    .floating-register {
+        transition:
+            transform 0.2s ease,
+            opacity 0.2s ease;
+    }
+
+    .btn:active {
+        transform: scale(0.97);
+    }
+
+    .social-card:active,
+    .info-card:active {
+        transform: scale(0.99);
+    }
+
+    .floating-register:active {
+        transform: scale(0.96);
+    }
+}
+
+
+/* =========================================================
+   10. PRINT
+   ========================================================= */
+
+@media print {
+
+    .mobile-nav,
+    .floating-register,
+    .back-to-top {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .hero,
+    .countdown-section,
+    .footer {
+        color: black;
+        background: white;
+    }
+
+    .hero__background,
+    .hero__pattern,
+    .hero__wave {
+        display: none;
+    }
+
+    .btn {
+        box-shadow: none;
+    }
+
+    .map-wrapper iframe {
+        min-height: 400px;
+    }
+}
+```
