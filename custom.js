@@ -240,126 +240,124 @@ function initBackToTop() {
 
 
 /* =========================================================
-   06. COUNTDOWN
+   COUNTDOWN SPMB
    ========================================================= */
 
 function initCountdown() {
 
-    /*
-     * Target default:
-     * 1 Januari 2027
-     *
-     * Jika HTML memiliki data-target,
-     * tanggal tersebut akan digunakan.
-     */
-
-    const countdown =
-        document.querySelector(
-            ".countdown"
-        );
+    const countdown = document.querySelector(".countdown");
 
     if (!countdown) return;
 
-    const targetAttribute =
-        countdown.getAttribute(
-            "data-target"
+    /*
+     * Prioritas:
+     * 1. data-target pada HTML
+     * 2. tanggal default
+     */
+
+    let targetString = countdown.dataset.target;
+
+    /*
+     * Jika HTML belum memiliki data-target,
+     * gunakan tanggal default.
+     *
+     * SILAKAN GANTI tanggal ini sesuai
+     * jadwal penutupan SPMB RA.
+     */
+
+    if (!targetString) {
+        targetString = "2027-01-01T23:59:59+07:00";
+    }
+
+    const targetDate = new Date(targetString);
+
+    /*
+     * Pastikan tanggal valid
+     */
+
+    if (isNaN(targetDate.getTime())) {
+        console.warn(
+            "Tanggal countdown tidak valid:",
+            targetString
         );
 
-    let targetDate;
-
-    if (targetAttribute) {
-
-        targetDate =
-            new Date(targetAttribute);
-
-    } else {
-
-        /*
-         * Target default dapat disesuaikan
-         * dengan jadwal SPMB pada HTML.
-         */
-
-        targetDate =
-            new Date(
-                "2027-01-01T00:00:00+07:00"
-            );
-
+        return;
     }
 
 
-    const daysElement =
-        document.querySelector(
-            "[data-days]"
-        );
+    const daysEl =
+        countdown.querySelector("[data-days]");
 
-    const hoursElement =
-        document.querySelector(
-            "[data-hours]"
-        );
+    const hoursEl =
+        countdown.querySelector("[data-hours]");
 
-    const minutesElement =
-        document.querySelector(
-            "[data-minutes]"
-        );
+    const minutesEl =
+        countdown.querySelector("[data-minutes]");
 
-    const secondsElement =
-        document.querySelector(
-            "[data-seconds]"
-        );
+    const secondsEl =
+        countdown.querySelector("[data-seconds]");
 
+
+    /*
+     * Jika struktur HTML tidak cocok,
+     * jangan membuat error.
+     */
 
     if (
-        !daysElement &&
-        !hoursElement &&
-        !minutesElement &&
-        !secondsElement
+        !daysEl ||
+        !hoursEl ||
+        !minutesEl ||
+        !secondsEl
     ) {
+
+        console.warn(
+            "Elemen countdown tidak lengkap."
+        );
+
         return;
     }
 
 
     function updateCountdown() {
 
-        const now =
-            new Date().getTime();
-
-        const target =
-            targetDate.getTime();
+        const now = Date.now();
 
         const distance =
-            target - now;
+            targetDate.getTime() - now;
 
+
+        /*
+         * Jika waktu sudah habis
+         */
 
         if (distance <= 0) {
 
-            setCountdownValue(
-                daysElement,
-                "00"
-            );
-
-            setCountdownValue(
-                hoursElement,
-                "00"
-            );
-
-            setCountdownValue(
-                minutesElement,
-                "00"
-            );
-
-            setCountdownValue(
-                secondsElement,
-                "00"
-            );
+            daysEl.textContent = "00";
+            hoursEl.textContent = "00";
+            minutesEl.textContent = "00";
+            secondsEl.textContent = "00";
 
             countdown.classList.add(
                 "countdown-finished"
             );
 
-            return;
+            const finishedMessage =
+                document.querySelector(
+                    ".countdown-finished-message"
+                );
 
+            if (finishedMessage) {
+                finishedMessage.textContent =
+                    "Pendaftaran telah mencapai batas waktu.";
+            }
+
+            return;
         }
 
+
+        /*
+         * Perhitungan waktu
+         */
 
         const days =
             Math.floor(
@@ -389,35 +387,50 @@ function initCountdown() {
             );
 
 
-        setCountdownValue(
-            daysElement,
-            days
-        );
+        /*
+         * Tampilkan angka
+         */
 
-        setCountdownValue(
-            hoursElement,
-            hours
-        );
+        daysEl.textContent =
+            String(days).padStart(2, "0");
 
-        setCountdownValue(
-            minutesElement,
-            minutes
-        );
+        hoursEl.textContent =
+            String(hours).padStart(2, "0");
 
-        setCountdownValue(
-            secondsElement,
-            seconds
-        );
+        minutesEl.textContent =
+            String(minutes).padStart(2, "0");
+
+        secondsEl.textContent =
+            String(seconds).padStart(2, "0");
 
     }
 
 
+    /*
+     * Jalankan langsung
+     */
+
     updateCountdown();
 
-    setInterval(
-        updateCountdown,
-        1000
-    );
+
+    /*
+     * Update setiap detik
+     */
+
+    const countdownInterval =
+        setInterval(
+            updateCountdown,
+            1000
+        );
+
+
+    /*
+     * Simpan interval agar bisa dihentikan
+     * jika halaman tidak aktif.
+     */
+
+    countdown.dataset.interval =
+        countdownInterval;
 
 }
 
