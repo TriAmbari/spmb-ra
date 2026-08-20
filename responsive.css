@@ -1694,4 +1694,123 @@
         min-height: 400px;
     }
 }
-```
+/* =========================================================
+   COUNTDOWN RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .countdown-section {
+        padding: 75px 0;
+    }
+
+    .countdown {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+
+        margin-top: 32px;
+    }
+
+    .countdown__item {
+
+        min-height: 145px;
+
+        padding: 18px 10px;
+
+        border-radius: 23px;
+    }
+
+    .countdown__icon {
+
+        width: 40px;
+        height: 40px;
+
+        margin-bottom: 9px;
+
+        border-radius: 13px;
+
+        font-size: 14px;
+    }
+
+    .countdown__item strong {
+
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+    .countdown__item span {
+
+        margin-top: 8px;
+
+        font-size: 9px;
+
+        letter-spacing: .6px;
+    }
+
+    .countdown-note {
+
+        border-radius: 18px;
+
+        padding: 12px 14px;
+
+        font-size: 10px;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+@media (max-width: 399px) {
+
+    .countdown-section {
+        padding: 60px 0;
+    }
+
+    .countdown {
+
+        gap: 8px;
+
+        margin-top: 25px;
+    }
+
+    .countdown__item {
+
+        min-height: 125px;
+
+        padding: 14px 6px;
+
+        border-radius: 19px;
+    }
+
+    .countdown__icon {
+
+        width: 34px;
+        height: 34px;
+
+        margin-bottom: 7px;
+
+        border-radius: 10px;
+
+        font-size: 12px;
+    }
+
+    .countdown__item strong {
+
+        font-size: 34px;
+    }
+
+    .countdown__item span {
+
+        font-size: 8px;
+    }
+
+    .countdown-note {
+
+        font-size: 9px;
+    }
+
+}
