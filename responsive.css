@@ -391,3 +391,25 @@ button {
         transition-duration: 0.01ms !important;
     }
 }
+/* Gambar intro: tampil utuh, rasio 1:1, tidak terpotong */
+.introduction__image {
+    width: 100%;
+    max-width: 520px;          /* batas lebar di tablet/desktop */
+    margin-inline: auto;
+}
+
+.introduction__image .image-card {
+    width: 100%;
+    height: auto;              /* hapus tinggi tetap dari style.css */
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.introduction__image .image-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;       /* gambar selalu tampil utuh */
+}
